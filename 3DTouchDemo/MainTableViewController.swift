@@ -63,6 +63,8 @@ class MainTableViewController: UITableViewController {
         dvc.index = index
     }
     
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {}
+    
     @IBAction func cancelFromEdit(segue: UIStoryboardSegue) {}
 
     @IBAction func saveFromEdit(segue: UIStoryboardSegue) {
