@@ -13,10 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    // Save shortcut item used as a result of an app launch, used later when app is activated.
+    var launchedShortcutItem: UIApplicationShortcutItem?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        var performAdditionalHandling = true
+        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+            launchedShortcutItem = shortcutItem
+            performAdditionalHandling = false
+        }
+        return performAdditionalHandling
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -34,13 +41,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        guard let shortcut = launchedShortcutItem else { return }
+        let _ = handleSortCutItem(shortcut)
+        launchedShortcutItem = nil
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        let handled = handleSortCutItem(shortcutItem)
+        completionHandler(handled)
+    }
+    
+    func handleSortCutItem(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
+        var vcs = (window!.rootViewController as! UINavigationController).viewControllers
+        if vcs.count > 1 {
+            vcs.last!.performSegue(withIdentifier: "UnwindToMainSegue", sender: nil)
+            vcs = (window!.rootViewController as! UINavigationController).viewControllers
+        }
+        vcs.first!.performSegue(withIdentifier: "NewAssetSegue", sender: nil)
+        return true
+    }
 }
 
