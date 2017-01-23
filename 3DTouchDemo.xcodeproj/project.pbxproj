@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE5E54011E3461F8002EC5FF /* fat-boy-special-2017.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5E54001E3461F8002EC5FF /* fat-boy-special-2017.png */; };
+		BE5E54031E34631A002EC5FF /* tricycle.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5E54021E34631A002EC5FF /* tricycle.png */; };
+		BE5E54051E346458002EC5FF /* Macbook.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5E54041E346458002EC5FF /* Macbook.png */; };
+		BE5E54071E346543002EC5FF /* tv.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5E54061E346543002EC5FF /* tv.png */; };
+		BE5E54091E3510D9002EC5FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E54081E3510D9002EC5FF /* DetailViewController.swift */; };
+		BE5E540B1E352F56002EC5FF /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E540A1E352F56002EC5FF /* EditViewController.swift */; };
+		BE6688701E341582004F75FD /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE66886F1E341582004F75FD /* Asset.swift */; };
+		BE6688721E342C8C004F75FD /* AssetStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6688711E342C8C004F75FD /* AssetStorage.swift */; };
+		BE6688741E343C82004F75FD /* dodge.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6688731E343C82004F75FD /* dodge.png */; };
 		BEF49B3B1E340D2F00F314CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF49B3A1E340D2F00F314CA /* AppDelegate.swift */; };
-		BEF49B3D1E340D2F00F314CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF49B3C1E340D2F00F314CA /* ViewController.swift */; };
 		BEF49B401E340D2F00F314CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF49B3E1E340D2F00F314CA /* Main.storyboard */; };
 		BEF49B421E340D2F00F314CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF49B411E340D2F00F314CA /* Assets.xcassets */; };
 		BEF49B451E340D2F00F314CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF49B431E340D2F00F314CA /* LaunchScreen.storyboard */; };
+		BEF49B4D1E3410BC00F314CA /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF49B4C1E3410BC00F314CA /* MainTableViewController.swift */; };
+		BEF49B4F1E34134600F314CA /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF49B4E1E34134600F314CA /* AssetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BEF49B371E340D2F00F314CA /* 3DTouchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5E54001E3461F8002EC5FF /* fat-boy-special-2017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fat-boy-special-2017.png"; sourceTree = "<group>"; };
+		BE5E54021E34631A002EC5FF /* tricycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tricycle.png; sourceTree = "<group>"; };
+		BE5E54041E346458002EC5FF /* Macbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Macbook.png; sourceTree = "<group>"; };
+		BE5E54061E346543002EC5FF /* tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tv.png; sourceTree = "<group>"; };
+		BE5E54081E3510D9002EC5FF /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BE5E540A1E352F56002EC5FF /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		BE66886F1E341582004F75FD /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		BE6688711E342C8C004F75FD /* AssetStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetStorage.swift; sourceTree = "<group>"; };
+		BE6688731E343C82004F75FD /* dodge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dodge.png; sourceTree = "<group>"; };
+		BEF49B371E340D2F00F314CA /* 3DTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF49B3A1E340D2F00F314CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEF49B3C1E340D2F00F314CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEF49B3F1E340D2F00F314CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEF49B411E340D2F00F314CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEF49B441E340D2F00F314CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEF49B461E340D2F00F314CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF49B4C1E3410BC00F314CA /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		BEF49B4E1E34134600F314CA /* AssetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +55,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE6688751E343C8B004F75FD /* Sample data */ = {
+			isa = PBXGroup;
+			children = (
+				BE6688731E343C82004F75FD /* dodge.png */,
+				BE5E54001E3461F8002EC5FF /* fat-boy-special-2017.png */,
+				BE5E54021E34631A002EC5FF /* tricycle.png */,
+				BE5E54041E346458002EC5FF /* Macbook.png */,
+				BE5E54061E346543002EC5FF /* tv.png */,
+			);
+			name = "Sample data";
+			sourceTree = "<group>";
+		};
 		BEF49B2E1E340D2F00F314CA = {
 			isa = PBXGroup;
 			children = (
@@ -46,7 +78,7 @@
 		BEF49B381E340D2F00F314CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEF49B371E340D2F00F314CA /* 3DTouchDemo.app */,
+				BEF49B371E340D2F00F314CA /* 3DTouch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,11 +87,17 @@
 			isa = PBXGroup;
 			children = (
 				BEF49B3A1E340D2F00F314CA /* AppDelegate.swift */,
-				BEF49B3C1E340D2F00F314CA /* ViewController.swift */,
+				BEF49B4C1E3410BC00F314CA /* MainTableViewController.swift */,
+				BE5E54081E3510D9002EC5FF /* DetailViewController.swift */,
+				BE5E540A1E352F56002EC5FF /* EditViewController.swift */,
 				BEF49B3E1E340D2F00F314CA /* Main.storyboard */,
+				BEF49B4E1E34134600F314CA /* AssetTableViewCell.swift */,
+				BE66886F1E341582004F75FD /* Asset.swift */,
+				BE6688711E342C8C004F75FD /* AssetStorage.swift */,
 				BEF49B411E340D2F00F314CA /* Assets.xcassets */,
 				BEF49B431E340D2F00F314CA /* LaunchScreen.storyboard */,
 				BEF49B461E340D2F00F314CA /* Info.plist */,
+				BE6688751E343C8B004F75FD /* Sample data */,
 			);
 			path = 3DTouchDemo;
 			sourceTree = "<group>";
@@ -67,9 +105,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEF49B361E340D2F00F314CA /* 3DTouchDemo */ = {
+		BEF49B361E340D2F00F314CA /* 3DTouch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEF49B491E340D2F00F314CA /* Build configuration list for PBXNativeTarget "3DTouchDemo" */;
+			buildConfigurationList = BEF49B491E340D2F00F314CA /* Build configuration list for PBXNativeTarget "3DTouch" */;
 			buildPhases = (
 				BEF49B331E340D2F00F314CA /* Sources */,
 				BEF49B341E340D2F00F314CA /* Frameworks */,
@@ -79,9 +117,9 @@
 			);
 			dependencies = (
 			);
-			name = 3DTouchDemo;
+			name = 3DTouch;
 			productName = 3DTouchDemo;
-			productReference = BEF49B371E340D2F00F314CA /* 3DTouchDemo.app */;
+			productReference = BEF49B371E340D2F00F314CA /* 3DTouch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEF49B361E340D2F00F314CA /* 3DTouchDemo */,
+				BEF49B361E340D2F00F314CA /* 3DTouch */,
 			);
 		};
 /* End PBXProject section */
@@ -124,9 +162,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5E54031E34631A002EC5FF /* tricycle.png in Resources */,
+				BE5E54051E346458002EC5FF /* Macbook.png in Resources */,
 				BEF49B451E340D2F00F314CA /* LaunchScreen.storyboard in Resources */,
+				BE5E54071E346543002EC5FF /* tv.png in Resources */,
 				BEF49B421E340D2F00F314CA /* Assets.xcassets in Resources */,
 				BEF49B401E340D2F00F314CA /* Main.storyboard in Resources */,
+				BE5E54011E3461F8002EC5FF /* fat-boy-special-2017.png in Resources */,
+				BE6688741E343C82004F75FD /* dodge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEF49B3D1E340D2F00F314CA /* ViewController.swift in Sources */,
+				BEF49B4D1E3410BC00F314CA /* MainTableViewController.swift in Sources */,
 				BEF49B3B1E340D2F00F314CA /* AppDelegate.swift in Sources */,
+				BE6688701E341582004F75FD /* Asset.swift in Sources */,
+				BE5E54091E3510D9002EC5FF /* DetailViewController.swift in Sources */,
+				BEF49B4F1E34134600F314CA /* AssetTableViewCell.swift in Sources */,
+				BE6688721E342C8C004F75FD /* AssetStorage.swift in Sources */,
+				BE5E540B1E352F56002EC5FF /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +309,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7WRAJPM7HE;
 				INFOPLIST_FILE = 3DTouchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.bitcrafters.-DTouchDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = net.bitcrafters.3DTouchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,8 +323,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7WRAJPM7HE;
 				INFOPLIST_FILE = 3DTouchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.bitcrafters.-DTouchDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = net.bitcrafters.3DTouchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -293,13 +343,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEF49B491E340D2F00F314CA /* Build configuration list for PBXNativeTarget "3DTouchDemo" */ = {
+		BEF49B491E340D2F00F314CA /* Build configuration list for PBXNativeTarget "3DTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEF49B4A1E340D2F00F314CA /* Debug */,
 				BEF49B4B1E340D2F00F314CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
