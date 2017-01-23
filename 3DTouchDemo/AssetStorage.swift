@@ -95,8 +95,22 @@ struct AssetStorage {
         add(asset: asset)
         image = UIImage(named: "Macbook.png")
         data =  UIImagePNGRepresentation(image!)
-        asset = Asset(name: "My MacBook", detail: "MacBook Pro with Touchbar", imageData: data!, date: Date(timeIntervalSinceNow: -27*24*60*60), favorite: false)
+        asset = Asset(name: "My MacBook", detail: "MacBook Pro Touchbar", imageData: data!, date: Date(timeIntervalSinceNow: -27*24*60*60), favorite: false)
         persist = true
         add(asset: asset)
+    }
+    
+    func mostRecentFavoriteAsset() -> (Asset, Int) {
+        let favoriteAssets = assets.filter({ $0.favorite }).sorted { $0.date > $1.date }
+        let favoriteAsset = favoriteAssets.first!
+        let index = assets.index(of: favoriteAsset)!
+        return (favoriteAsset, index)
+    }
+    
+    func mostRecentNonFavoriteAsset() -> (Asset, Int) {
+        let nonFavoriteAssets = assets.filter({ !$0.favorite }).sorted { $0.date > $1.date }
+        let recentAsset = nonFavoriteAssets.first!
+        let index = assets.index(of: recentAsset)!
+        return (recentAsset, index)
     }
 }

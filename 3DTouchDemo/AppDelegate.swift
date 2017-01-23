@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             launchedShortcutItem = shortcutItem
             performAdditionalHandling = false
         }
+        
+        createDynamicShortcuts()
+        
         return performAdditionalHandling
     }
 
@@ -34,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        createDynamicShortcuts()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -50,19 +54,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        let handled = handleSortCutItem(shortcutItem)
-        completionHandler(handled)
-    }
-    
-    func handleSortCutItem(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
-        var vcs = (window!.rootViewController as! UINavigationController).viewControllers
-        if vcs.count > 1 {
-            vcs.last!.performSegue(withIdentifier: "UnwindToMainSegue", sender: nil)
-            vcs = (window!.rootViewController as! UINavigationController).viewControllers
-        }
-        vcs.first!.performSegue(withIdentifier: "NewAssetSegue", sender: nil)
-        return true
-    }
 }
 

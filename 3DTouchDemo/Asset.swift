@@ -41,3 +41,16 @@ extension Asset {
     }
 }
 
+extension Asset: Equatable {
+    
+    static func == (lhs: Asset, rhs: Asset) -> Bool {
+        return
+            lhs.name == rhs.name &&
+            lhs.detail == rhs.detail &&
+            lhs.imageData == rhs.imageData &&
+            lhs.date == rhs.date &&
+            lhs.favorite == rhs.favorite
+    }
+ 
+}
+

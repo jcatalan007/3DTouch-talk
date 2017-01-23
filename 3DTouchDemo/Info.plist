@@ -33,11 +33,6 @@
 			<string>New Asset</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER).AddAsset</string>
-			<key>UIApplicationShortcutItemUserInfo</key>
-			<dict>
-				<key>version</key>
-				<string>1.0.2</string>
-			</dict>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

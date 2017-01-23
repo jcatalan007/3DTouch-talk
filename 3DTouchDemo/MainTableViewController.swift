@@ -33,8 +33,6 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AssetTableViewCell", for: indexPath) as! AssetTableViewCell
         cell.asset = AssetStorage.sharedStorage.asset(atIndex: indexPath.row)
-        // Configure the cell...
-
         return cell
     }
     
@@ -73,5 +71,15 @@ class MainTableViewController: UITableViewController {
             let asset = svc.asset
             AssetStorage.sharedStorage.add(asset: asset)
         }
+    }
+    
+    func segueForShortcutToDetail(_ index: Int) {
+        let indexPath = IndexPath(row: index, section: 0)
+        tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+        perform(#selector(segueToDetailDelayed), with: nil, afterDelay: 0.6)
+    }
+    
+    func segueToDetailDelayed() {
+        performSegue(withIdentifier: "DetailSegue", sender: nil)
     }
 }

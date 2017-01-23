@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1B49731E36793C00B3B612 /* ShortcutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B49721E36793C00B3B612 /* ShortcutHandler.swift */; };
 		BE5E54011E3461F8002EC5FF /* fat-boy-special-2017.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5E54001E3461F8002EC5FF /* fat-boy-special-2017.png */; };
 		BE5E54031E34631A002EC5FF /* tricycle.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5E54021E34631A002EC5FF /* tricycle.png */; };
 		BE5E54051E346458002EC5FF /* Macbook.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5E54041E346458002EC5FF /* Macbook.png */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE1B49721E36793C00B3B612 /* ShortcutHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutHandler.swift; sourceTree = "<group>"; };
 		BE5E54001E3461F8002EC5FF /* fat-boy-special-2017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fat-boy-special-2017.png"; sourceTree = "<group>"; };
 		BE5E54021E34631A002EC5FF /* tricycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tricycle.png; sourceTree = "<group>"; };
 		BE5E54041E346458002EC5FF /* Macbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Macbook.png; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				BEF49B3A1E340D2F00F314CA /* AppDelegate.swift */,
+				BE1B49721E36793C00B3B612 /* ShortcutHandler.swift */,
 				BEF49B4C1E3410BC00F314CA /* MainTableViewController.swift */,
 				BE5E54081E3510D9002EC5FF /* DetailViewController.swift */,
 				BE5E540A1E352F56002EC5FF /* EditViewController.swift */,
@@ -182,6 +185,7 @@
 			files = (
 				BEF49B4D1E3410BC00F314CA /* MainTableViewController.swift in Sources */,
 				BEF49B3B1E340D2F00F314CA /* AppDelegate.swift in Sources */,
+				BE1B49731E36793C00B3B612 /* ShortcutHandler.swift in Sources */,
 				BE6688701E341582004F75FD /* Asset.swift in Sources */,
 				BE5E54091E3510D9002EC5FF /* DetailViewController.swift in Sources */,
 				BEF49B4F1E34134600F314CA /* AssetTableViewCell.swift in Sources */,
@@ -309,7 +313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7WRAJPM7HE;
 				INFOPLIST_FILE = 3DTouchDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.bitcrafters.3DTouchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -323,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7WRAJPM7HE;
 				INFOPLIST_FILE = 3DTouchDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.bitcrafters.3DTouchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
