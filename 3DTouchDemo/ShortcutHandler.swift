@@ -13,17 +13,19 @@ extension AppDelegate {
     func createDynamicShortcuts() {
         
         let application = UIApplication.shared
-        
         let bundleIdentifier = Bundle.main.bundleIdentifier!
+        var items = [UIMutableApplicationShortcutItem]()
         
-        let (favoriteAsset, indexOfFavorite) = AssetStorage.sharedStorage.mostRecentFavoriteAsset()
-        let favoriteShortcut = UIMutableApplicationShortcutItem(
-            type: "\(bundleIdentifier).Favorite",
-            localizedTitle: favoriteAsset.name,
-            localizedSubtitle: favoriteAsset.detail,
-            icon: UIApplicationShortcutIcon(type: .love),
-            userInfo: ["version": Bundle.main.fullVersionNumber!, "index":indexOfFavorite]
-        )
+        if let (favoriteAsset, indexOfFavorite) = AssetStorage.sharedStorage.mostRecentFavoriteAsset() {
+            let favoriteShortcut = UIMutableApplicationShortcutItem(
+                type: "\(bundleIdentifier).Favorite",
+                localizedTitle: favoriteAsset.name,
+                localizedSubtitle: favoriteAsset.detail,
+                icon: UIApplicationShortcutIcon(type: .love),
+                userInfo: ["version": Bundle.main.fullVersionNumber!, "index":indexOfFavorite]
+            )
+            items.append(favoriteShortcut)
+        }
         
         let (recentAsset, indexOfRecent) = AssetStorage.sharedStorage.mostRecentNonFavoriteAsset()
         let recentShortcut = UIMutableApplicationShortcutItem(
@@ -33,9 +35,9 @@ extension AppDelegate {
             icon: UIApplicationShortcutIcon(type: .task),
             userInfo: ["version": Bundle.main.fullVersionNumber!, "index":indexOfRecent]
         )
+        items.append(recentShortcut)
         
-        application.shortcutItems = [favoriteShortcut, recentShortcut]
-        
+        application.shortcutItems = items
     }
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {

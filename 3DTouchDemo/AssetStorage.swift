@@ -100,11 +100,14 @@ struct AssetStorage {
         add(asset: asset)
     }
     
-    func mostRecentFavoriteAsset() -> (Asset, Int) {
+    func mostRecentFavoriteAsset() -> (Asset, Int)? {
         let favoriteAssets = assets.filter({ $0.favorite }).sorted { $0.date > $1.date }
-        let favoriteAsset = favoriteAssets.first!
-        let index = assets.index(of: favoriteAsset)!
-        return (favoriteAsset, index)
+        if let favoriteAsset = favoriteAssets.first {
+            let index = assets.index(of: favoriteAsset)!
+            return (favoriteAsset, index)
+        } else {
+            return nil
+        }
     }
     
     func mostRecentNonFavoriteAsset() -> (Asset, Int) {

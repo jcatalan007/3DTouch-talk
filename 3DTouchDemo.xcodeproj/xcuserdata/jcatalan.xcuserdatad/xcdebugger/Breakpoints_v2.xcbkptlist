@@ -27,22 +27,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "3DTouchDemo/ShortcutHandler.swift"
-            timestampString = "506895106.97807"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "handleSortCutItem(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "3DTouchDemo/AppDelegate.swift"
             timestampString = "506890640.94644"
             startingColumnNumber = "9223372036854775807"
@@ -50,22 +34,6 @@
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "applicationDidEnterBackground(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "3DTouchDemo/ShortcutHandler.swift"
-            timestampString = "506895106.97807"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "handleSortCutItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
