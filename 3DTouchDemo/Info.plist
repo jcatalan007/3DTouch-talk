@@ -20,10 +20,8 @@
 	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>The app uses your camera to take pictures</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The app uses your photo librry to get pictures</string>
+	<string>The app uses your photo library to get pictures</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
