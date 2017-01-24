@@ -8,10 +8,11 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController, UIViewControllerPreviewingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerForPreviewing(with: self, sourceView: tableView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +44,27 @@ class MainTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
+    }
+    
+    // MARK: - Peek, pop and quick actions
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard
+            let indexPath = tableView.indexPathForRow(at: location)
+        else {
+            return nil
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailViewController.index = indexPath.row
+        let cellRect = tableView.rectForRow(at: indexPath)
+        let sourceRect = previewingContext.sourceView.convert(cellRect, from: tableView)
+        previewingContext.sourceRect = sourceRect
+        return detailViewController
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
     }
     
     // MARK: - Navigation

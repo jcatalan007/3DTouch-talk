@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -102,7 +103,7 @@
         <!--Detail-->
         <scene sceneID="H86-aW-fBM">
             <objects>
-                <viewController id="ace-br-GE9" customClass="DetailViewController" customModule="_DTouch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="ace-br-GE9" customClass="DetailViewController" customModule="_DTouch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m8A-ah-tND"/>
                         <viewControllerLayoutGuide type="bottom" id="Xr7-br-Vhe"/>
