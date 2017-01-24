@@ -80,15 +80,19 @@ class DetailViewController: UIViewController {
     override var previewActionItems : [UIPreviewActionItem] {
         var favoriteTitle: String
         if asset.favorite {
-            favoriteTitle = "Remove from favorites"
+            favoriteTitle = "💔 \(self.asset.name)"
         } else {
-            favoriteTitle = "Add to favorites"
+            favoriteTitle = "❤️ \(self.asset.name)"
         }
         let favoriteAction = UIPreviewAction(title: favoriteTitle, style: .default) { (action, viewController) in
                 self.asset.favorite = !self.asset.favorite
                 AssetStorage.sharedStorage.update(self.asset, atIndex: self.index!)
                 NotificationCenter.default.post(name: DetailViewController.updateUINotification, object: nil)
         }
-        return [favoriteAction]
+        let deleteAction = UIPreviewAction(title: "Delete \(self.asset.name)", style: .destructive) { (action, viewController) in
+            AssetStorage.sharedStorage.delete(assetAtIndex: self.index!)
+            NotificationCenter.default.post(name: DetailViewController.updateUINotification, object: nil)
+        }
+        return [favoriteAction,deleteAction]
     }
 }
