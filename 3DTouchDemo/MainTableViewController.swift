@@ -91,12 +91,11 @@ extension MainTableViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         guard
-            let indexPath = tableView.indexPathForRow(at: location)
-            else {
-                return nil
+            let indexPath = tableView.indexPathForRow(at: location),
+            let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        else {
+            return nil
         }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detailViewController.index = indexPath.row
         let cellRect = tableView.rectForRow(at: indexPath)
         let sourceRect = previewingContext.sourceView.convert(cellRect, from: tableView)
