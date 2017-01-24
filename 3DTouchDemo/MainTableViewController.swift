@@ -13,10 +13,15 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerForPreviewing(with: self, sourceView: tableView)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadAssets), name: DetailViewController.updateUINotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        reloadAssets()
+    }
+    
+    func reloadAssets() {
         tableView.reloadData()
     }
     

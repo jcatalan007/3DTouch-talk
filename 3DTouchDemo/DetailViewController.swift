@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
     var asset = Asset()
     var index: Int? = nil
     
+    static let updateUINotification = NSNotification.Name(rawValue: "UpdateUINotification")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -73,4 +75,20 @@ class DetailViewController: UIViewController {
         }
     }
 
+    // MARK: Preview actions
+    
+    override var previewActionItems : [UIPreviewActionItem] {
+        var favoriteTitle: String
+        if asset.favorite {
+            favoriteTitle = "Remove from favorites"
+        } else {
+            favoriteTitle = "Add to favorites"
+        }
+        let favoriteAction = UIPreviewAction(title: favoriteTitle, style: .default) { (action, viewController) in
+                self.asset.favorite = !self.asset.favorite
+                AssetStorage.sharedStorage.update(self.asset, atIndex: self.index!)
+                NotificationCenter.default.post(name: DetailViewController.updateUINotification, object: nil)
+        }
+        return [favoriteAction]
+    }
 }
