@@ -91,7 +91,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     func keyboardDidShow(_ notification: Notification) {
         if let info = notification.userInfo {
             let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size
-            let contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height - toolbar.frame.height, 0.0)
+            let contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
             scrollView.contentInset = contentInsets
             scrollView.scrollIndicatorInsets = contentInsets
             var visibleRect = self.containerView.frame
@@ -121,7 +121,8 @@ class EditViewController: UIViewController, UITextFieldDelegate {
                     let name = name.text,
                     let detail = detail.text,
                     let image = thumbnail.image,
-                    let data = UIImagePNGRepresentation(image)
+                    let data = UIImagePNGRepresentation(image),
+                    let dateText = date.text
                 else {
                     return
                 }
@@ -129,7 +130,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
                 asset.detail = detail
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MM/dd/yyyy"
-                asset.date = dateFormatter.date(from: date.text!)!
+                asset.date = dateFormatter.date(from: dateText)!
                 asset.favorite = favorite.isOn
                 asset.imageData = data
             }

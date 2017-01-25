@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The app uses your photo library to get pictures</string>
+	<key>NSCameraUsageDescription</key>
+	<string>The app uses your camera to get pictures</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
