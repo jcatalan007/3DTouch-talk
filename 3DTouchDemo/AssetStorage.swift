@@ -77,6 +77,7 @@ struct AssetStorage {
     }
     
     mutating func createDummyAssets() {
+        assets = [Asset]()
         var image = UIImage(named: "dodge.png")
         var data =  UIImagePNGRepresentation(image!)
         var asset = Asset(name: "My Awesome Car", detail: "Dodge Challenger SXT", imageData: data!, date: Date(timeIntervalSinceNow: -52*24*60*60), favorite: false)
